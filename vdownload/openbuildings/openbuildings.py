@@ -44,7 +44,7 @@ def download_tiles_for_country(country_identifier):
     """Download tiles for a country based on its name or ISO code."""
     tiles_to_download = []
     country_name = ""
-    csv_url = "https://raw.githubusercontent.com/thangqd/vtiles/refs/heads/main/vtiles/utils/openbuildings/s2countries.csv"
+    csv_url = "https://raw.githubusercontent.com/thangqd/vdownload/refs/heads/main/vdownload/openbuildings/s2countries.csv"
     
     # Fetch the CSV from the online source
     response = requests.get(csv_url)
