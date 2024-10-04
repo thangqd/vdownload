@@ -31,7 +31,7 @@ Ex: `> osmdownload vietnam`
   ```
 Ex: `> osminfo vietnam.osm.pbf` 
 
-#### Show OSM info (.pbf)
+#### Convert OSM daata to GeoJSON
   ``` bash 
   > osm2geojson -i <path_to_osm_file.osm.pbf> -o <output_file.geojson>
   ```
