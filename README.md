@@ -1,15 +1,7 @@
 # VDownload - A Powerful Geospatial Data Downloader
 
 ## Installation: 
-- Using pip install (Windows/ Linux):
-  ``` bash 
-  pip install vdownload
-  ```
-- Show information of installed vdownload: 
-  ``` bash 
-  pip show vdownload
-  ```
-- Install the latest vertion of vdownload:
+- Using pip install: 
   ``` bash 
   pip install vdownload --upgrade
   ```
