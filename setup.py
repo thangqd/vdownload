@@ -1,6 +1,7 @@
 # python setup.py sdist bdist_wheel
 # twine upload dist/*
-
+import os
+import shutil
 from setuptools import setup, find_packages
 
 requirements = [
@@ -9,6 +10,16 @@ requirements = [
     'shapely~=2.0.1',
     'osmium~=3.7.0'
 ],
+
+def clean_build():
+    build_dir = 'build'
+    dist_dir = 'dist'
+    if os.path.exists(build_dir):
+        shutil.rmtree(build_dir)
+    if os.path.exists(dist_dir):
+        shutil.rmtree(dist_dir)
+
+clean_build()
 
 setup(
     name='vdownload',
