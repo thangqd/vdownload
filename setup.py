@@ -8,7 +8,8 @@ requirements = [
     'tqdm~=4.66.2',
     'requests~=2.31.0',
     'shapely~=2.0.1',
-    'osmium~=3.7.0'
+    'osmium~=3.7.0',
+    'geopandas~=1.0.1'
 ],
 
 def clean_build():
@@ -41,11 +42,12 @@ setup(
             'osmpub = vdownload.osm.osmpub:main',         
             
             'openbuildings = vdownload.openbuildings.openbuildings:main',
+
+            'tsv2shapefile = vdownload.msroads.tsv2shapefile:main',
            
         ],
     },    
 
-    # scripts=["bin/utils.py"], # utils.py is just a demo,
     install_requires=requirements,    
     classifiers=[
         'Programming Language :: Python :: 3',
