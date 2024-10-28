@@ -33,6 +33,11 @@ setup(
     long_description_content_type='text/markdown',
     requires_python=">=3.0",
     packages=find_packages(),
+    
+    package_data={
+        'vdownload.pmtiles': ['pmtiles.exe', 'pmtiles', 'countries_bbox.json'],  # Include binaries for both OS
+    },
+
     entry_points={
         'console_scripts': [
             'osmdownload = vdownload.osm.osmdownload:main',
@@ -42,9 +47,11 @@ setup(
             'osmpub = vdownload.osm.osmpub:main',         
             
             'openbuildings = vdownload.openbuildings.openbuildings:main',
-
+            
             'tsv2shapefile = vdownload.msroads.tsv2shapefile:main',
-           
+                        
+            'pmtiles = vdownload.pmtiles.pmtiles_call:run_pmtiles',
+
         ],
     },    
 

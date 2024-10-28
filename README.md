@@ -36,4 +36,26 @@ Ex: `> osm2geojson -i vietnam.osm.pbf -o vietnam.geojson`
   ```
 Ex: `> openbuildings vietnam` or `> openbuildings vnm`
 
+### PMTIles:
+#### Download PMTiles by country:
+  ``` bash 
+  > pmtiles extract <url> --country <country name or iso3 code> ouput.pmtiles
+  > pmtiles extract <url> --bbox= ouput.pmtiles
+  ```
+Ex: `> pmtiles extract  https://build.protomaps.com/20241027.pmtiles --country VNM vietnam.pmtiles` or `> openbuildings vnm`
+  
+
+#### Serve PMTiles:
+  ``` bash 
+  > pmtiles serve .
+    # serves this directory at http://localhost:8080/TILESET/{z}/{x}/{y}.mvt 
+    # the .pmtiles extension is added automatically
+    # TileJSON at http://localhost:8080/TILESET.json
+    pmtiles serve . --bucket=https://example.com
+    pmtiles serve / --bucket=s3://BUCKET_NAME
+    pmtiles serve PREFIX --bucket=s3://BUCKET_NAME
+  > 
+  ```
+Ex: `> pmtiles serve .  --bucket=https://map-api-new.sovereignsolutions.net/sovereign/v20240410/vietnam_pmtiles` 
+
 
