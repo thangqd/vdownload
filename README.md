@@ -47,15 +47,18 @@ Ex: `> pmtiles extract  https://build.protomaps.com/20241027.pmtiles --country V
 
 #### Serve PMTiles:
   ``` bash 
-  > pmtiles serve .
+  > ./pmtiles serve . --cors=\*
     # serves this directory at http://localhost:8080/TILESET/{z}/{x}/{y}.mvt 
     # the .pmtiles extension is added automatically
-    # TileJSON at http://localhost:8080/TILESET.json
+    # Access metadata at http://localhost:8080/TILESET/metadata
+    #http://localhost:8080/TILESET/{z}/{x}/{y}.mvt 
+    # S3 redirect: https://map-api-new.sovereignsolutions.net/sovereign/v20240410/vietnam_pmtiles/vietnam.pmtiles
+
     pmtiles serve . --bucket=https://example.com
     pmtiles serve / --bucket=s3://BUCKET_NAME
     pmtiles serve PREFIX --bucket=s3://BUCKET_NAME
   > 
   ```
-Ex: `> pmtiles serve .  --bucket=https://map-api-new.sovereignsolutions.net/sovereign/v20240410/vietnam_pmtiles` 
-
-
+Ex:   
+  `> pmtiles serve .  --bucket=https://map-api-new.sovereignsolutions.net/sovereign/v20240410/vietnam_pmtiles`<br>
+  `> /pmtiles serve . --cors=\* `
