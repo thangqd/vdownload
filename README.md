@@ -61,4 +61,4 @@ Ex: `> pmtiles extract  https://build.protomaps.com/20241027.pmtiles --country V
   ```
 Ex:   
   `> pmtiles serve .  --bucket=https://map-api-new.sovereignsolutions.net/sovereign/v20240410/vietnam_pmtiles`<br>
-  `> /pmtiles serve . --cors=\* `
+  `> ./pmtiles serve . --cors=\* `
