@@ -1,13 +1,15 @@
 # VDownload - A Powerful Geospatial Data Downloader
 
 ## Installation: 
+[![PyPI version](https://badge.fury.io/py/vdownload.svg)](https://badge.fury.io/py/vdownload)
+[![PyPI downloads](https://img.shields.io/pypi/dm/vdownload.svg)](https://pypistats.org/packages/vdownload)
+![Downloads](https://static.pepy.tech/personalized-badge/vdownload?period=total&units=international_system&left_color=grey&right_color=blue&left_text=total)
+
 - Using pip install: 
   ``` bash 
   pip install vdownload --upgrade
   ```
     
-- Visit vdownload on [PyPI](https://pypi.org/project/vdownload/)
-
 ## Usage:
 
 ### OSM data:
